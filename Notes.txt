@@ -1,0 +1,134 @@
+EX_03
+
+PEMDAS, which stands for Parentheses Exponents Multiplication Division Addition
+Subtraction.
+
+EX_05
+
+format characters
+%r is a very useful one. It’s like saying “print this no matter what.”
+
+EX_06
+
+Python knows you want something to be a string when you put either "
+(double-quotes) or ' (single- quotes) around the text.
+
+You simply put the formatted variables in the string, and then a % (percent)
+character, followed by the variable. The only catch is that if you want
+multiple formats in your string to print multiple variables, you need to put
+them inside ( ) (parentheses) separated by , (commas).
+
+y = "Those who know %s and those who %s." % (binary, do_not)
+
+What is the difference between %r and %s?
+We use %r for debugging, since it displays the “raw” data of the variable, but
+we use %s and others for displaying to users.
+
+Why do you put ' (single- quotes) around some strings and not others?
+Mostly it’s because of style, but I’ll use a single- quote inside a string that
+has double-quotes.
+
+EX_07
+
+[line] longer than 80 characters, ... in Python is bad 
+style.
+
+EX_08
+
+Should I use %s or %r for formatting?
+You should use %s and only use %r for getting debugging information about
+something. The %r will give you the “raw programmer’s” version of variable,
+also known as the “representation.”
+
+Why do I have to put quotes around “one” but not around True or False?
+That’s because Python recognizes True and False as keywords representing the
+concept of true and false. If you put quotes around them, then they are turned
+into strings and won’t work right.
+
+EX_09
+
+Why do the \n newlines not work when I use %r?
+That’s how %r formatting works; it prints it the way you wrote it (or close to
+it). It’s the “raw” format for debugging.
+
+EX_10
+
+Escape Sequences
+This is the list of all the escape sequences Python supports.
+
+Escape      What it does.
+\\          Backslash (\)
+\'          Single- quote (')
+\"          Double- quote (")
+\a          ASCII bell (BEL)
+\b          ASCII backspace (BS)
+\f          ASCII formfeed (FF)
+\n          ASCII linefeed (LF)
+\N{name}    Character named name in the Unicode database (Unicode only)
+\r ASCII    carriage return (CR)
+\t ASCII    horizontal tab (TAB)
+\uxxxx      Character with 16- bit hex value xxxx (Unicode only)
+\Uxxxxxxxx  Character with 32- bit hex value xxxxxxxx (Unicode only)
+\v ASCII    vertical tab (VT)
+\ooo        Character with octal value oo
+\xhh        Character with hex value hh
+
+EX_11
+
+NOTE: Notice that we put a , (comma) at the end of each print line. This is so
+that print doesn’t end the line with a new line character and go to the next
+line.
+
+How do I get a number from someone so I can do math?
+That’s a little advanced, but try x = int(raw_input()), which gets the number as
+a string from raw_input() then converts it to an integer using int().
+
+EX_12
+
+In Terminal, where you normally run python to run your scripts, type pydoc
+raw_input. Read what it says. If you’re on Windows try
+python - m pydoc raw_input instead.
+
+EX_13
+
+1    from sys import argv
+
+On line 1 we have what’s called an “import.” This is how you add features to
+your script from the Python feature set. Rather than give you all the features
+(modules) at once, Python asks you to say what you plan to use. This keeps your
+programs small, but it also acts as documentation for other programmers who read
+your code later.
+
+3    script, first, second, third = argv
+
+Line 3 “unpacks” argv so that, rather than holding all the arguments, it gets
+assigned to four variables you can work with: script, first, second, and third.
+This may look strange, but “unpack” is probably the best word to describe what
+it does. It just says, “Take whatever is in argv, unpack it, and assign it to
+all these variables on the left in order.”
+
+Are the command line arguments strings?
+Yes, they come in as strings, even if you typed numbers on the command line. Use
+int() to convert them just like with raw_input().
+
+EX_15
+
+What you got back from open is a file, and it’s also got commands you can give
+it. You give a ﬁ le a command by using the . (dot or period), the name of the
+command, and parameters. Just like with open and raw_input. The difference is
+that when you say txt.read() you are saying, “Hey txt! Do your read command with
+no parameters!”
+
+Have your script also do a close() on the txt and txt_again variables. It’s
+important to close ﬁ les when you are done with them.
+
+EX_16
+
+...commands (methods/functions) you can give to ﬁ les. Here’s the list of
+commands I want you to remember:
+• close—Closes the ﬁ le. Like File- >Save.. in your editor.
+• read—Reads the contents of the ﬁ le. You can assign the result to a variable.
+• readline—Reads just one line of a text ﬁle.
+• truncate—Empties the ﬁ le. Watch out if you care about the ﬁle.
+• write(stuff)—Writes stuff to the ﬁle.
+
