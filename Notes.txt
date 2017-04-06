@@ -114,22 +114,22 @@ int() to convert them just like with raw_input().
 EX_15
 
 What you got back from open is a file, and it’s also got commands you can give
-it. You give a ﬁ le a command by using the . (dot or period), the name of the
+it. You give a ﬁle a command by using the . (dot or period), the name of the
 command, and parameters. Just like with open and raw_input. The difference is
 that when you say txt.read() you are saying, “Hey txt! Do your read command with
 no parameters!”
 
 Have your script also do a close() on the txt and txt_again variables. It’s
-important to close ﬁ les when you are done with them.
+important to close ﬁles when you are done with them.
 
 EX_16
 
-...commands (methods/functions) you can give to ﬁ les. Here’s the list of
+...commands (methods/functions) you can give to ﬁles. Here’s the list of
 commands I want you to remember:
-• close—Closes the ﬁ le. Like File- >Save.. in your editor.
-• read—Reads the contents of the ﬁ le. You can assign the result to a variable.
+• close—Closes the ﬁle. Like File- >Save.. in your editor.
+• read—Reads the contents of the ﬁle. You can assign the result to a variable.
 • readline—Reads just one line of a text ﬁle.
-• truncate—Empties the ﬁ le. Watch out if you care about the ﬁle.
+• truncate—Empties the ﬁle. Watch out if you care about the ﬁle.
 • write(stuff)—Writes stuff to the ﬁle.
 
 r
@@ -157,5 +157,47 @@ Read and write mode. The file pointer is at the end of the file if the file
 exists. The file opens in the append mode. If the file does not exist, it
 creates a new file for reading and writing.
 
+EX_17
 
+we import another handy command named exists. This returns True if a ﬁle exists,
+based on its name in a string as an argument. It returns False if not.
+
+cat It’s an old command that “concatenates” ﬁles together, but mostly it’s just
+an easy way to print a ﬁle to the screen.
+
+What does the len() function do?
+It gets the length of the string that you pass to it and then returns that as a
+number.
+
+indata = open(from_file).read(), which means you 
+don’t need to then do in_file.close() when you reach the end of the script. It
+should already be closed by Python once that one line runs.
+
+EX_18
+
+Functions do three things:
+1. They name pieces of code the way variables name strings and numbers.
+2. They take arguments the way your scripts take argv.
+3. Using #1 and #2, they let you make your own “mini-scripts” or
+“tiny commands.”
+You can create a function by using the word def in Python.
+
+Let’s break down the function:
+1. First we tell Python we want to make a function using def for “deﬁne.”
+2. On the same line as def, we then give the function a name. ...your function
+should have a short name that says what it does.
+3. Then we tell it we want *args (asterisk args), which is a lot like your argv
+parameter but for functions. This has to go inside () parentheses to work.
+4. Then we end this line with a : colon and start indenting.
+5. After the colon all the lines that are indented four spaces will become
+attached to this name.
+
+What’s allowed for a function name?
+Just like variable names, anything that doesn’t start with a number and is
+letters, numbers, and underscores will work.
+
+What does the * in *args do?
+That tells Python to take all the arguments to the function and then put them in
+args as a list. It’s like argv that you’ve been using, but for functions. It’s
+not normally used too often unless speciﬁcally needed.
 
