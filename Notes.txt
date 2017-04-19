@@ -201,3 +201,5 @@ That tells Python to take all the arguments to the function and then put them in
 args as a list. It’s like argv that you’ve been using, but for functions. It’s
 not normally used too often unless speciﬁcally needed.
 
+EX_19
+
